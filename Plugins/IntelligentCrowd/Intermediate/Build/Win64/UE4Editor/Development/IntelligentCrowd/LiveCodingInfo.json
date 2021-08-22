@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IntelligentCrowd.cpp.obj": [
+			"IntelligentCrowdCharacterBase.cpp.obj",
+			"HealthActorComponent.cpp.obj",
+			"DamageActorBase.cpp.obj",
+			"IntelligentCrowd.cpp.obj",
+			"IntelligentCrowdInterface.cpp.obj",
+			"TargetPointActor.cpp.obj"
+		],
+		"Module.IntelligentCrowd.gen.cpp.obj": [
+			"DamageActorBase.gen.cpp.obj",
+			"HealthActorComponent.gen.cpp.obj",
+			"IntelligentCrowd.init.gen.cpp.obj",
+			"IntelligentCrowdCharacterBase.gen.cpp.obj",
+			"IntelligentCrowdInterface.gen.cpp.obj",
+			"TargetPointActor.gen.cpp.obj"
+		]
+	}
+}

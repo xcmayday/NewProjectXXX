@@ -1,0 +1,2 @@
+D:\U4Project\ProjectXOX\Plugins\IntelligentCrowd\Intermediate\Build\Win64\UE4Editor\Development\IntelligentCrowd\Definitions.IntelligentCrowd.h
+D:\U4Project\ProjectXOX\Plugins\IntelligentCrowd\Source\IntelligentCrowd\Public\IntelligentCrowd.h
