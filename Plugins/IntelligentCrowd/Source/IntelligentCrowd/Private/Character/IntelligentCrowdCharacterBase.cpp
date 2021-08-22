@@ -11,7 +11,7 @@ AIntelligentCrowdCharacterBase::AIntelligentCrowdCharacterBase()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	CurrentHealth = MaxHealth;
-
+	bIsDead = false;
 }
 
 int32 AIntelligentCrowdCharacterBase::GetTeamID() const
