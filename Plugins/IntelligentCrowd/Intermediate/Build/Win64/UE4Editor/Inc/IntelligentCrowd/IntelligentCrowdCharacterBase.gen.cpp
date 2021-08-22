@@ -97,6 +97,13 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		*(ATargetPointActor**)Z_Param__Result=P_THIS->FindTargetPoint();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AIntelligentCrowdCharacterBase::execGetIsDeadState)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetIsDeadState();
+		P_NATIVE_END;
+	}
 	static FName NAME_AIntelligentCrowdCharacterBase_K2_OnDeath = FName(TEXT("K2_OnDeath"));
 	void AIntelligentCrowdCharacterBase::K2_OnDeath(AActor* CauserActor)
 	{
@@ -109,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		UClass* Class = AIntelligentCrowdCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "FindTargetPoint", &AIntelligentCrowdCharacterBase::execFindTargetPoint },
+			{ "GetIsDeadState", &AIntelligentCrowdCharacterBase::execGetIsDeadState },
 			{ "TakeDmage", &AIntelligentCrowdCharacterBase::execTakeDmage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -142,6 +150,43 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AIntelligentCrowdCharacterBase_FindTargetPoint_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics
+	{
+		struct IntelligentCrowdCharacterBase_eventGetIsDeadState_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((IntelligentCrowdCharacterBase_eventGetIsDeadState_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(IntelligentCrowdCharacterBase_eventGetIsDeadState_Parms), &Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/IntelligentCrowdCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AIntelligentCrowdCharacterBase, nullptr, "GetIsDeadState", nullptr, nullptr, sizeof(IntelligentCrowdCharacterBase_eventGetIsDeadState_Parms), Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -234,6 +279,11 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AIModeType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_AIModeType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsDead_MetaData[];
+#endif
+		static void NewProp_bIsDead_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsDead;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TargetPoints_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TargetPoints_MetaData[];
@@ -250,6 +300,7 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AIntelligentCrowdCharacterBase_FindTargetPoint, "FindTargetPoint" }, // 1260294147
+		{ &Z_Construct_UFunction_AIntelligentCrowdCharacterBase_GetIsDeadState, "GetIsDeadState" }, // 3262055037
 		{ &Z_Construct_UFunction_AIntelligentCrowdCharacterBase_K2_OnDeath, "K2_OnDeath" }, // 3560177848
 		{ &Z_Construct_UFunction_AIntelligentCrowdCharacterBase_TakeDmage, "TakeDmage" }, // 3393388881
 	};
@@ -282,6 +333,16 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_AIModeType = { "AIModeType", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIntelligentCrowdCharacterBase, AIModeType), Z_Construct_UEnum_IntelligentCrowd_EAIModeType, METADATA_PARAMS(Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_AIModeType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_AIModeType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Character/IntelligentCrowdCharacterBase.h" },
+	};
+#endif
+	void Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead_SetBit(void* Obj)
+	{
+		((AIntelligentCrowdCharacterBase*)Obj)->bIsDead = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AIntelligentCrowdCharacterBase), &Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_TargetPoints_Inner = { "TargetPoints", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_ATargetPointActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_TargetPoints_MetaData[] = {
@@ -295,6 +356,7 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_MaxHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_AIModeType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_AIModeType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_bIsDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_TargetPoints_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIntelligentCrowdCharacterBase_Statics::NewProp_TargetPoints,
 	};
@@ -328,7 +390,7 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowdCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AIntelligentCrowdCharacterBase, 782063217);
+	IMPLEMENT_CLASS(AIntelligentCrowdCharacterBase, 4269630675);
 	template<> INTELLIGENTCROWD_API UClass* StaticClass<AIntelligentCrowdCharacterBase>()
 	{
 		return AIntelligentCrowdCharacterBase::StaticClass();

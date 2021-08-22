@@ -3,6 +3,8 @@
 
 #include "Character/IntelligentCrowdCharacterBase.h"
 
+DEFINE_LOG_CATEGORY_STATIC(IntelligentCrowdCharacterBaseLog, Log, All);
+
 // Sets default values
 AIntelligentCrowdCharacterBase::AIntelligentCrowdCharacterBase()
 {
@@ -20,6 +22,11 @@ int32 AIntelligentCrowdCharacterBase::GetTeamID() const
 float AIntelligentCrowdCharacterBase::GetActorHeath() const
 {
 	return CurrentHealth;
+}
+
+bool AIntelligentCrowdCharacterBase::GetIsDeadState() const
+{
+	return bIsDead;
 }
 
 // Called when the game starts or when spawned
@@ -49,6 +56,7 @@ ATargetPointActor* AIntelligentCrowdCharacterBase::FindTargetPoint()
 void AIntelligentCrowdCharacterBase::TakeDmage(AActor* CauserActor, float DamageValue)
 {
 	CurrentHealth = CurrentHealth - DamageValue;
+	UE_LOG(IntelligentCrowdCharacterBaseLog, Log, TEXT(">>>%s,DamageValue=%f"), *FString(__FUNCTION__), DamageValue);
 	if (CurrentHealth<=0)
 	{
 		OnDeath(CauserActor);
@@ -57,6 +65,7 @@ void AIntelligentCrowdCharacterBase::TakeDmage(AActor* CauserActor, float Damage
 
 void AIntelligentCrowdCharacterBase::OnDeath(AActor* CauserActor)
 {
+	bIsDead = true;
 	K2_OnDeath(CauserActor);
 }
 

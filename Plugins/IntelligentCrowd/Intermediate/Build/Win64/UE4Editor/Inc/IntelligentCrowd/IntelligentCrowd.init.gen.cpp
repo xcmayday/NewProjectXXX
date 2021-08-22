@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeIntelligentCrowd_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x8DC7FC41,
+				0x55F8E005,
 				0x6D827781,
 				METADATA_PARAMS(nullptr, 0)
 			};

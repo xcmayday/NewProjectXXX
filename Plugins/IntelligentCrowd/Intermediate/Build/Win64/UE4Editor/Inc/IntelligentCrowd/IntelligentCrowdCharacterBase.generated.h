@@ -19,13 +19,15 @@ class ATargetPointActor;
 #define ProjectXOX_Plugins_IntelligentCrowd_Source_IntelligentCrowd_Public_Character_IntelligentCrowdCharacterBase_h_29_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execTakeDmage); \
-	DECLARE_FUNCTION(execFindTargetPoint);
+	DECLARE_FUNCTION(execFindTargetPoint); \
+	DECLARE_FUNCTION(execGetIsDeadState);
 
 
 #define ProjectXOX_Plugins_IntelligentCrowd_Source_IntelligentCrowd_Public_Character_IntelligentCrowdCharacterBase_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execTakeDmage); \
-	DECLARE_FUNCTION(execFindTargetPoint);
+	DECLARE_FUNCTION(execFindTargetPoint); \
+	DECLARE_FUNCTION(execGetIsDeadState);
 
 
 #define ProjectXOX_Plugins_IntelligentCrowd_Source_IntelligentCrowd_Public_Character_IntelligentCrowdCharacterBase_h_29_EVENT_PARMS \
@@ -84,6 +86,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AIntelligentCrowdCharacterBase); \
 	FORCEINLINE static uint32 __PPO__TeamID() { return STRUCT_OFFSET(AIntelligentCrowdCharacterBase, TeamID); } \
 	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(AIntelligentCrowdCharacterBase, MaxHealth); } \
 	FORCEINLINE static uint32 __PPO__AIModeType() { return STRUCT_OFFSET(AIntelligentCrowdCharacterBase, AIModeType); } \
+	FORCEINLINE static uint32 __PPO__bIsDead() { return STRUCT_OFFSET(AIntelligentCrowdCharacterBase, bIsDead); } \
 	FORCEINLINE static uint32 __PPO__TargetPoints() { return STRUCT_OFFSET(AIntelligentCrowdCharacterBase, TargetPoints); }
 
 

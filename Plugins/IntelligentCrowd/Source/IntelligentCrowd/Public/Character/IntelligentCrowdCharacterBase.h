@@ -35,6 +35,9 @@ public:
 	virtual int32 GetTeamID()const override;
 	virtual float GetActorHeath()const override;
 
+	UFUNCTION(BlueprintPure)
+		bool GetIsDeadState()const;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -67,6 +70,9 @@ protected:
 		float MaxHealth;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IntelligentInfo")
 		EAIModeType AIModeType;
+
+	UPROPERTY()
+		bool bIsDead;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IntelligentInfo")
 		TArray<class ATargetPointActor*> TargetPoints;
