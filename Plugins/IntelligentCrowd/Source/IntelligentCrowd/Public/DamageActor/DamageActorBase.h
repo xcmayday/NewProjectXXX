@@ -19,7 +19,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	//virtual void DamageAction()override;
+	UFUNCTION(BlueprintCallable,Category="Damage")
+	virtual void LineTraceDamage();
 
 public:	
 	// Called every frame
@@ -35,6 +36,8 @@ protected:
 		float Period;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage|Info")
 		float DelayDamage;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage|Info")
+		float DamageArea;
 private:
 
 
