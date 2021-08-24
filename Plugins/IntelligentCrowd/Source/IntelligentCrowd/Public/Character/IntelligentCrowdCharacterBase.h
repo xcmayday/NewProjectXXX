@@ -32,8 +32,9 @@ public:
 	// Sets default values for this character's properties
 	AIntelligentCrowdCharacterBase();
 
-	virtual int32 GetTeamID()const override;
-	virtual float GetActorHeath()const override;
+
+	 int32 GetTeamID()const override;
+	 float GetActorHeath()const override;
 
 	UFUNCTION(BlueprintPure)
 		bool GetIsDeadState()const;

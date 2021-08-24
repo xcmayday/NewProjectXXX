@@ -22,8 +22,9 @@ class INTELLIGENTCROWD_API IIntelligentCrowdInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-
+	//UFUNCTION(BlueprintPure,Category="IntelligentCrowdInterface")
 	virtual int32 GetTeamID()const { return 0; }
+	//UFUNCTION(BlueprintPure,Category="IntelligentCrowdInterface")
 	virtual float GetActorHeath()const { return 0; }
 
 };
