@@ -15,9 +15,9 @@ bool UGlobalBlueprintFunctionLibrary::IsEnemy(AActor* A, AActor* B)
 	{
 		if (InterfaceA->GetTeamID()==InterfaceB->GetTeamID())
 		{
-			return true;
+			return false;
 		}
-		return false;
+		return true;
 	}
-	return false;
+	return true;
 }
