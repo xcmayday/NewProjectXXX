@@ -23,6 +23,12 @@ void ADamageProjectileActorBase::BeginPlay()
 	
 }
 
+void ADamageProjectileActorBase::InitDamageInfo(const float NewDamageValue, const float NewDamageArea)
+{
+	DamageValue = NewDamageValue;
+	DamageArea = NewDamageArea;
+}
+
 // Called every frame
 void ADamageProjectileActorBase::Tick(float DeltaTime)
 {
