@@ -1,1 +1,2 @@
 *[[:space:]].umap filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].uasset filter=lfs diff=lfs merge=lfs -text
